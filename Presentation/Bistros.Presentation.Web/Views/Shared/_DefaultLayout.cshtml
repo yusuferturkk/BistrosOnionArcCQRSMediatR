@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "_DefaultLayout";
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    @await Component.InvokeAsync("_HeadComponent")
+</head>
+
+<body>
+    <!--header-->
+    @await Component.InvokeAsync("_HeaderComponent")
+    <!--//header-->
+    
+    @RenderBody();
+    
+    <!-- footer -->
+    @await Component.InvokeAsync("_FooterComponent")
+    <!-- //footer -->
+
+    <!-- Js scripts -->
+    @await Component.InvokeAsync("_ScriptComponent")
+    <!-- //Js scripts -->
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿@model List<ResultCategoryDto>
+
+@{
+    ViewData["Title"] = "Menu";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<!-- inner banner -->
+<div class="inner-banner">
+    <div class="w3l-breadcrumb">
+        <div class="container">
+            <h4 class="inner-text-title font-weight-bold text-white mb-sm-3 mb-2">Menülerimiz</h4>
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/Default/Index/">Anasayfa</a></li>
+                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Menü</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //inner banner -->
+<!-- menu -->
+<div class="menu-w3ls py-5" id="menu">
+    <div class="container py-md-5 py-4">
+        @foreach (var item in Model)
+        {
+            @if (item.Foods != null && item.Foods.Any())
+            {
+                <div class="another-sec">
+                    <h3 class="title-big mb-2">@item.Name</h3>
+                    <div class="row menu-body">
+                        @foreach (var value in item.Foods)
+                        {
+                            <!-- Section starts: Lunch -->
+                            <div class="col-lg-6 menu-section pr-lg-5">
+                                <!-- Item starts -->
+                                <div class="menu-item">
+                                    <div class="row no-gutters">
+                                        <div class="col-9 menu-item-name">
+                                            <h6>@value.Name</h6>
+                                        </div>
+                                        <div class="col-3 menu-item-price text-right">
+                                            <h6>@value.Price₺</h6>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-description">
+                                        <p>@value.Description</p>
+                                    </div>
+                                </div>
+                                <!-- Item ends -->
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<!-- //menu -->

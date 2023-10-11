@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<!-- banner section -->
+@await Component.InvokeAsync("_BannerComponent")
+<!-- //banner section -->
+
+<!-- about section -->
+@await Component.InvokeAsync("_AboutComponent")
+<!-- //about section -->
+
+<!-- dishes section -->
+@await Component.InvokeAsync("_DishesComponent")
+<!-- //dishes section -->
+
+<!-- grids section -->
+@await Component.InvokeAsync("_GridsComponent")
+<!-- //grids section -->
+
+<!-- stats section -->
+@await Component.InvokeAsync("_StatsComponent")
+<!-- //stats section -->
+
+<!-- specials section -->
+@await Component.InvokeAsync("_SpecialComponent")
+<!-- //specials section -->
