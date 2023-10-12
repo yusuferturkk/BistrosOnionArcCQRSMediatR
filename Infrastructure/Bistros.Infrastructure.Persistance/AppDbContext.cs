@@ -14,13 +14,7 @@ namespace Bistros.Infrastructure.Persistance
         {
         }
 
-        public DbSet<About> Abouts { get; set; }
-        public DbSet<Banner> Banners { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Dish> Dishes { get; set; }
         public DbSet<Food> Foods { get; set; }
-        public DbSet<Service> Services { get; set; }
-        public DbSet<Special> Specials { get; set; }
-        public DbSet<Statistic> Statistics { get; set; }
     }
 }
